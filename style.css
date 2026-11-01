@@ -1,298 +1,64 @@
 
-/* GENERAL SETTINGS */
+/* =====================================
+   SLA ACADEMY - COMPLETE WEBSITE CSS
+   Theme: Orange, White and Dark
+===================================== */
+
+/* 1. RESET AND GENERAL SETTINGS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    line-height: 1.7;
+    color: #333333;
     background: #ffffff;
+    line-height: 1.7;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-/* HEADER AND NAVIGATION */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* 2. HEADER AND NAVIGATION */
+
 header {
+    width: 100%;
     background: #ffffff;
-    padding: 15px 7%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 16px 7%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 10;
 }
 
 nav {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
-nav h2 {
-    color: #f36b16;
-    font-size: 26px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-nav ul li a {
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    color: #f36b16;
-}
-
-/* HERO SECTION */
-.hero {
-    min-height: 480px;
-    padding: 65px 7%;
-    background: linear-gradient(120deg, #fff0e5, #ffdfc7);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-}
-
-.hero div {
-    text-align: left;
-}
-
-.hero h1 {
-    color: #252525;
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.hero img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    background: #f36b16;
-    color: white;
-    padding: 13px 28px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #d9530b;
-}
-
-/* GENERAL SECTIONS */
-.section {
-    padding: 55px 7%;
-    max-width: 1300px;
-    margin: auto;
-    text-align: center;
-}
-
-.section h2 {
-    color: #f36b16;
-    font-size: 29px;
-    margin-bottom: 22px;
-}
-
-.section p {
-    font-size: 17px;
-    margin-bottom: 15px;
-}
-
-.section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    margin-top: 30px;
-}
-
-.card {
-    background: #ffffff;
-    padding: 28px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-    color: #f36b16;
-    margin-bottom: 12px;
-    font-size: 20px;
-}
-
-/* COURSE PAGE BANNER */
-.page-banner {
-    background: #fff0e5;
-    padding: 65px 7%;
-    text-align: center;
-}
-
-.page-banner h1 {
-    color: #f36b16;
-    font-size: 38px;
-}
-
-/* FEATURE LIST */
-.feature-list {
-    text-align: left;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.feature-list li {
-    margin-bottom: 10px;
-}
-
-/* CTA SECTION */
-.cta {
-    background: #fff0e5;
-    padding: 55px 7%;
-    text-align: center;
-}
-
-.cta h2 {
-    color: #f36b16;
-    margin-bottom: 15px;
-}
-
-/* CONTACT SECTION */
-.contact-details,
-.contact-form {
-    max-width: 700px;
-    margin: 25px auto;
-    text-align: left;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* LINKS */
-.text-link {
-    color: #f36b16;
-    font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-    background: #222222;
-    color: #ffffff;
-    padding: 25px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* MOBILE RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        padding: 15px 5%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 40px 6%;
-        text-align: center;
-    }
-
-    .hero div {
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero img {
-        height: 240px;
-    }
-
-    .section {
-        padding: 40px 6%;
-    }
-
-    .section h2 {
-        font-size: 25px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .page-banner h1 {
-        font-size: 30px;
-    }
-}
-
-
-/* STYLISH SLA ACADEMY LOGO */
+/* 3. STYLISH SLA ACADEMY LOGO */
 
 .logo {
     font-family: Arial, Helvetica, sans-serif;
@@ -302,7 +68,7 @@ footer {
     color: #f36b16;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
+    white-space: nowrap;
     transition: 0.3s ease;
 }
 
@@ -317,7 +83,399 @@ footer {
     transform: scale(1.04);
 }
 
+/* 4. NAVIGATION LINKS */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333333;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f36b16;
+}
+
+/* Supports pages using direct nav links */
+
+nav > a:not(.logo) {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333333;
+}
+
+nav > a:not(.logo):hover {
+    color: #f36b16;
+}
+
+/* 5. HERO SECTION */
+
+.hero {
+    min-height: 470px;
+    padding: 65px 7%;
+    background: linear-gradient(120deg, #fff0e5, #ffdfc7);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero div {
+    text-align: left;
+}
+
+.hero h1 {
+    color: #222222;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero p {
+    color: #555555;
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.hero img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* 6. HERO TAG */
+
+.tag {
+    display: inline-block;
+    background: #ffffff;
+    color: #f36b16;
+    padding: 7px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* 7. BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: #f36b16;
+    color: #ffffff;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 8px 5px 0;
+    transition: 0.3s ease;
+    border: 2px solid #f36b16;
+}
+
+.btn:hover {
+    background: #d9530b;
+    border-color: #d9530b;
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: #ffffff;
+    color: #f36b16;
+    border: 2px solid #f36b16;
+}
+
+.btn-light:hover {
+    background: #fff0e5;
+    color: #d9530b;
+}
+
+/* 8. GENERAL SECTIONS */
+
+.section {
+    max-width: 1300px;
+    margin: auto;
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #f36b16;
+    margin-bottom: 22px;
+}
+
+.section h3 {
+    color: #292929;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.section h3 + p {
+    margin-top: 0;
+}
+
+/* 9. INTRO TEXT */
+
+.intro {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* 10. COURSE CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px 23px;
+    border-radius: 12px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #f36b16;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #666666;
+}
+
+/* 11. COURSE ICONS */
+
+.course-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* 12. LIGHT BACKGROUND SECTION */
+
+.bg-light {
+    background: #fff8f3;
+    max-width: 100%;
+}
+
+/* 13. PAGE BANNER */
+
+.page-banner {
+    background: linear-gradient(120deg, #fff0e5, #ffdfc7);
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.page-banner h1 {
+    color: #f36b16;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    font-size: 17px;
+    color: #555555;
+}
+
+/* 14. COURSE DETAIL IMAGES */
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 25px auto;
+}
+
+/* 15. FEATURE LIST */
+
+.feature-list {
+    max-width: 800px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+.feature-list li {
+    padding: 7px 0;
+    font-size: 16px;
+    color: #444444;
+}
+
+/* 16. TEXT LINKS */
+
+.text-link {
+    display: inline-block;
+    color: #f36b16;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #d9530b;
+    text-decoration: underline;
+}
+
+/* 17. CALL TO ACTION */
+
+.cta {
+    background: linear-gradient(120deg, #fff0e5, #ffdfc7);
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #252525;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #555555;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* 18. CONTACT PAGE */
+
+.contact-details,
+.contact-form {
+    max-width: 700px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #f36b16;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* 19. FOOTER */
+
+footer {
+    background: #222222;
+    color: #ffffff;
+    padding: 30px 7%;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #ffb47f;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* 20. RESPONSIVE TABLET DESIGN */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 25px;
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+}
+
+/* 21. RESPONSIVE MOBILE DESIGN */
+
 @media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .logo {
         font-size: 26px;
     }
@@ -325,5 +483,83 @@ footer {
     .logo span {
         font-size: 21px;
     }
-}
 
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero div {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero img {
+        height: 230px;
+    }
+
+    .section {
+        padding: 42px 6%;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .section p {
+        font-size: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
+
+    .page-banner {
+        padding: 45px 6%;
+    }
+
+    .page-banner h1 {
+        font-size: 29px;
+    }
+
+    .cta {
+        padding: 45px 6%;
+    }
+
+    .cta h2 {
+        font-size: 25px;
+    }
+
+    .btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 25px 5%;
+    }
+}
