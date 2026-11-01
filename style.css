@@ -7,149 +7,252 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f8f9fa;
     color: #333;
-    line-height: 1.6;
+    background: #fff;
+    line-height: 1.7;
 }
 
 header {
-    background: #ffffff;
-    padding: 20px 7%;
+    background: white;
+    padding: 18px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 2px 8px #eee;
 }
 
-header h2 {
+.logo {
+    font-size: 25px;
+    font-weight: bold;
     color: #ed6b18;
+    text-decoration: none;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    margin: 10px;
     font-weight: bold;
+    margin: 8px 12px;
 }
 
-nav a:hover {
+nav a:hover,
+.text-link:hover {
     color: #ed6b18;
 }
 
 .hero {
-    background: #fff0e5;
+    background: linear-gradient(120deg, #fff0e5, #ffe0c7);
+    padding: 100px 8%;
     text-align: center;
-    padding: 90px 20px;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 42px;
+    max-width: 750px;
+    margin: 15px auto;
     color: #222;
-    margin-bottom: 15px;
+    line-height: 1.3;
 }
 
 .hero p {
-    margin-bottom: 25px;
+    max-width: 650px;
+    margin: 15px auto 25px;
+}
+
+.tag {
+    color: #ed6b18;
+    font-weight: bold;
 }
 
 .btn {
     display: inline-block;
     background: #ed6b18;
     color: white;
-    padding: 12px 25px;
-    text-decoration: none;
+    padding: 11px 24px;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
+    margin: 8px 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c94e0a;
+}
+
+.btn-light {
+    background: white;
+    color: #ed6b18;
 }
 
 .page-banner {
     background: #fff0e5;
+    padding: 65px 20px;
     text-align: center;
-    padding: 55px 20px;
 }
 
 .page-banner h1 {
+    font-size: 34px;
     color: #ed6b18;
 }
 
-.content {
-    padding: 45px 7%;
+.section {
+    padding: 60px 7%;
     text-align: center;
 }
 
-.content h2 {
-    margin-bottom: 15px;
+.section h2 {
     color: #ed6b18;
+    margin-bottom: 18px;
+}
+
+.intro {
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+.bg-light {
+    background: #fff8f2;
 }
 
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 25px;
+    gap: 22px;
+    margin-top: 30px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    width: 280px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px #ddd;
+    padding: 28px 22px;
+    width: 290px;
+    border-radius: 9px;
+    box-shadow: 0 3px 15px #e9e9e9;
+    transition: transform 0.3s;
 }
 
-.card h3,
-.card h2 {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2,
+.card h3 {
     color: #ed6b18;
+    margin-bottom: 12px;
 }
 
-form {
-    max-width: 450px;
-    margin: 20px auto;
+.course-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+.text-link {
+    display: inline-block;
+    color: #ed6b18;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.feature-list {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.feature-list li {
+    padding: 7px;
+}
+
+.cta {
+    text-align: center;
+    background: #fff0e5;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    color: #ed6b18;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    margin: 25px auto;
+}
+
+.contact-details h3 {
+    color: #ed6b18;
+    margin-top: 15px;
+}
+
+.contact-form {
+    max-width: 480px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 13px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font: inherit;
 }
 
-textarea {
-    min-height: 100px;
+.contact-form textarea {
+    min-height: 120px;
 }
 
-button {
-    background: #ed6b18;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.small-note {
+    font-size: 12px;
+    color: #777;
 }
 
 footer {
     background: #222;
     color: white;
+    padding: 25px 15px;
     text-align: center;
-    padding: 20px;
 }
 
-@media (max-width: 600px) {
+footer a {
+    color: #ffad70;
+    text-decoration: none;
+}
+
+@media (max-width: 650px) {
     header {
         flex-direction: column;
+        gap: 12px;
     }
 
     nav {
-        margin-top: 15px;
+        text-align: center;
     }
 
     nav a {
         display: inline-block;
         margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 65px 20px;
     }
 
     .hero h1 {
-        font-size: 26px;
+        font-size: 29px;
+    }
+
+    .page-banner h1 {
+        font-size: 27px;
+    }
+
+    .card {
+        width: 100%;
     }
 }
