@@ -290,3 +290,40 @@ footer {
         font-size: 30px;
     }
 }
+
+
+/* STYLISH SLA ACADEMY LOGO */
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #f36b16;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: #252525;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 26px;
+    }
+
+    .logo span {
+        font-size: 21px;
+    }
+}
+
