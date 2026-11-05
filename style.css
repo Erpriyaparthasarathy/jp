@@ -562,3 +562,44 @@ footer a:hover {
         padding: 25px 5%;
     }
 }
+/* Additional Mobile Optimization */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 4px;
+}
+
+.btn {
+    min-height: 44px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
